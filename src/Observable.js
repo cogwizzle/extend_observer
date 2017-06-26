@@ -21,7 +21,7 @@ var Observable = function(){
    */
   function fire(){
     subscribers.forEach(function(item){
-      item.notify(notification);
+      console.log("Fire function must be implemented to notify the subscriber.");
     });
   }
 
@@ -37,9 +37,11 @@ var Observable = function(){
 	 */
 	function unsubscribe(subscriber){
 		subscribers = subscribers.filter(
-			function(item !== subscriber){
-				return item
-			}
+			function(item){
+        if(item !== subscriber){
+			  	return item
+			  }
+      }
 		);
   }
 

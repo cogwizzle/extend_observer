@@ -1,0 +1,23 @@
+{
+  "name": "extend_observer",
+  "homepage": "https://github.com/jfehrman/extend_observer",
+  "description": "Observer pattern for javascript meant to be used with extend library.  https://github.com/jfehrman/extend/tree/no_require",
+  "main": "src/Observable.js",
+  "keywords": [
+    "Observer",
+    "Pattern",
+    "Extend",
+    "JavaScript",
+    "Object",
+    "Oriented",
+    "JavaScript",
+    "Polyfill"
+  ],
+  "authors": [
+    "Joseph Fehrman"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "Extend": "https://github.com/jfehrman/extend.git#25aa80245379377860ee4ceee0e8add627240ba2"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Observable Test</title>
+</head>
+<body>
+</body>
+<script type="text/javascript" src="../bower_components/Extend/dist/extend.min.js"></script>
+<script type="text/javascript" src="../src/Observable.js"></script>
+<script>
+  var subscribable = extend(new Observable(), (function(){
+
+    /**
+     * Custom fire function.
+     */
+    function fire(){
+      this.getSubscribers().forEach(function(item){
+        item.notify("hello");
+      });
+    };
+
+    return {
+      "fire" : fire,
+    }
+  })());
+  console.log(subscribable);
+  var subscriber = {
+    notify: function (info) {
+      alert(info);
+    },
+  }
+  subscribable.subscribe(subscriber);
+  subscribable.fire();
+</script>
+</html>
